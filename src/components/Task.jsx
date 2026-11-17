@@ -9,7 +9,7 @@ export const Task =()=> {
     const hasTask = taskItem.length > 0;
     const weekdays = ["MON","TUE","WED","THU","FRI","SAT","SUN"];
     const day = new Date();
-    const weekday = weekdays[day.getDay()];
+    const weekday = weekdays[(day.getDay() + 6) % 7];
 
     const showToday = (day)=>{
         return weekday === day;
