@@ -21,14 +21,14 @@ export const Task =()=> {
                 {hasTask && 
         (<ul className="flex justify-center gap-1 text-[10px] text-Silver md:text-sm md:gap-7 p-2.5 pl-5 ">
         {weekdays.map((day)=>(
-            <li key={day} className={showToday(day)? "border-b-2 border-Yellow pb-1 w-7.5" : "w-7.5"}>{day}</li>
+            <li key={day} className={showToday(day)? "border-b-2 border-Yellow pb-1 w-7.5 text-center" : "w-7.5 text-center"}>{day}</li>
         ))}
         </ul>)}
         {taskItem?.map((item)=> (
             <div key={item.id} className="flex flex-col justify-evenly h-14 border-b border-b-Silver" >
                 <div className="flex items-center justify-around">
-                    <span className="w-11 text-[9px] wrap-anywhere md:text-sm md:w-42">{item.name}</span>
-                    <div className="flex w-58.5 gap-4.5 justify-start items-center md:gap-10.5 md:w-104 md:ml-1 md:justify-center">
+                    <span className="w-11 text-[10px] wrap-anywhere md:text-sm md:w-42">{item.name}</span>
+                    <div className="flex w-58.5 gap-4.5 justify-start items-center md:gap-10.5 md:w-104 md:mr-1 md:justify-center">
                         <input className="appearance-none w-4 h-4 border-2 border-Yellow rounded-4xl cursor-pointer checked:bg-Yellow checked:border-Yellow transition-all
   " type="checkbox" checked={item.days.monday} onChange={(e)=> progressTracker(item.id , e)} name="monday"/>
                         <input className="appearance-none w-4 h-4 border-2 border-Yellow rounded-4xl cursor-pointer checked:bg-Yellow checked:border-Yellow transition-all
